@@ -1,6 +1,6 @@
 {
-  "name": "@frootloops/create-algo",
-  "version": "1.0.0",
+  "name": "create-algo",
+  "version": "1.0.1",
   "description": "A CLI to bootstrap a javascript environment for solving algorithms",
   "main": "src/index.js",
   "bin": {
