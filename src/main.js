@@ -33,7 +33,7 @@ export async function createProject(options) {
   };
 
   const currentFileUrl = import.meta.url;
-  const templateDir = path.resolve(new URL(currentFileUrl).pathname, '../../templates', options.template);
+  const templateDir = path.resolve(new URL(currentFileUrl).pathname, '../../templates', options.template.toLowerCase());
   options.templateDirectory = templateDir;
 
   try {
@@ -42,6 +42,9 @@ export async function createProject(options) {
     console.error('%s Invalid template name', chalk.red.bold('ERROR'));
     process.exit(1);
   }
+
+  console.log('Copy project files');
+  await copyTemplateFiles(options);
 
   const tasks = new Listr([
     {
