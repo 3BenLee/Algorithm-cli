@@ -1,6 +1,6 @@
 {
   "name": "@frootloops/create-algo",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "A CLI to bootstrap a javascript environment for solving algorithms",
   "main": "src/index.js",
   "bin": {
@@ -28,5 +28,10 @@
     "listr": "^0.14.3",
     "ncp": "^2.0.0",
     "pkg-install": "^1.0.0"
-  }
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "templates/"
+  ]
 }
