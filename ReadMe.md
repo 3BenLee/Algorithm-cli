@@ -2,6 +2,10 @@
 
 create-algo is a cli used to generate a boilerplate for solving coding challenges.
 
+You can install this globally and use it to create a quick boilerplate but I think it's nice to keep all of the coding challenges you solve in one directory for easy reference. I recommend that users create a parent directory and repository. Give it any name you like.
+
+Then install `create-algo` in the newly created parent directory as a dependency. I usually create a child directory inside the parent with the name of the challenge I am solving and run `create-algo` in this newly created child directory to generate a boilerplate.
+
 ## Installation
 
 **npm**
@@ -18,17 +22,17 @@ yarn add @frootloops/create-algo
 
 ## Usage
 
-It's nice to keep all of the coding challenges you solve in one directory for easy reference. I recommend that users create a directory and repository. Give it any name you like.
+When you want to create a new boilerplate inside of your parent directory to solve a new challenge simply run the `create-algo` command from your desired location inside your parent directory. You will then be prompted to chose Javascript or Typescript and whether or not to initialize git. If you are creating this directory as a stand alone directory then you may want to chose yes to initialize. If this is a subdirectory then I always choose no because the parent directory is the initialized repo and that's where we are now housing this new child directory.
 
-Then install `create-algo` in the newly crated directory as a dependency.
+If you want to use Typescript you have two choices, you can either initially run `create-algo typescript --install` or you can just run `create-algo` and then run `npm install` after selecting through the prompts. Either way the Typescript dependencies will be installed.
 
-When you want to create a new boilerplate inside of your directory to solve a challenge simply run the `create-algo` command from your desired location inside your directory. You will then be prompted to chose and Javascript or Typescript and whether or not to initialize git. Simply choose using the arrow keys and press enter.
+Your boilerplate consisting of a `package.json`, a `src` folder with an index file for your code, and a `.gitignore` will be installed in the directory of your choosing.
 
-If you want to use typescript you have two choices, you can either initially run `create-algo typescript --install` or you can just run `create-algo` and then run `npm install` after selecting through the prompts.
+The `package.json` is bare bones and just provides you with the ability to run `test-algo` in the terminal to test your solution.
 
-Your boilerplate consisting of a package.json and a src folder with an index file will be installed in the directory of your choosing.
+The `.gitignore` initially contains the `node_modules`, which we don't need to push to our repo. You can add any other files here if you need to later on.
 
-The package.json is bare bones and just provides you with the ability to run `test-algo` in the terminal to test your solution. Enjoy and happy coding!
+Enjoy and happy coding!
 
 ## Contributing
 
