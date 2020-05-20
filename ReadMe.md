@@ -4,7 +4,7 @@ create-algo is a cli used to generate a boilerplate for solving coding challenge
 
 You can install this globally and use it to create a quick boilerplate but I think it's nice to keep all of the coding challenges you solve in one directory for easy reference. I recommend that users create a parent directory and repository. Give it any name you like.
 
-Then install `create-algo` in the newly created parent directory as a dependency. I usually create a child directory inside the parent with the name of the challenge I am solving and run `create-algo` in this newly created child directory to generate a boilerplate.
+Then install `create-algo` in the newly created parent directory as a dependency.
 
 ## Installation
 
@@ -22,11 +22,9 @@ yarn add @frootloops/create-algo
 
 ## Usage
 
-When you want to create a new boilerplate inside of your parent directory to solve a new challenge simply run the `create-algo` command from your desired location inside your parent directory. You will then be prompted to chose Javascript or Typescript and whether or not to initialize git. If you are creating this directory as a stand alone directory then you may want to chose yes to initialize. If this is a subdirectory then I always choose no because the parent directory is the initialized repo and that's where we are now housing this new child directory.
+When you want to create a new boilerplate to solve a new challenge simply run the `create-algo` command from your desired location inside your directory. You will then be prompted to chose Javascript or Typescript. Then you will be prompted to name your new subdirectory. I usually give it the name of the challenge I am solving and maybe even the site it came from for reference.
 
-If you want to use Typescript you have two choices, you can either initially run `create-algo typescript --install` or you can just run `create-algo` and then run `npm install` after selecting through the prompts. Either way the Typescript dependencies will be installed.
-
-Your boilerplate consisting of a `package.json`, a `src` folder with an index file for your code, and a `.gitignore` will be installed in the directory of your choosing.
+Your boilerplate consisting of a `package.json`, an index file for your code, and a `.gitignore` will be installed.
 
 The `package.json` is bare bones and just provides you with the ability to run `test-algo` in the terminal to test your solution.
 
