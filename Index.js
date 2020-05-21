@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const inquirer = require('inquirer');
+const chalk = require('chalk');
 const fs = require('fs');
 
 const CHOICES = fs.readdirSync(`${__dirname}/templates`);
@@ -18,7 +19,7 @@ const QUESTIONS = [
     message: 'Challenge name:',
     validate: function (input) {
       if (/^([A-Za-z\-\_\d])+$/.test(input)) return true;
-      else return 'Project name may only include letters, numbers, underscores and hashes.';
+      else return 'Project name cannot be empty and may only include letters, numbers, underscores, and hashes.';
     },
   },
 ];
@@ -51,4 +52,7 @@ function createDirectoryContents(templatePath, newProjectPath) {
       fs.writeFileSync(writePath, contents, 'utf8');
     }
   });
+
+  setTimeout(() => console.log(chalk.magenta.bold('Project is ready!')), 1000);
+  setTimeout(() => console.log(chalk.cyan.bold('DONE')), 2000);
 }
