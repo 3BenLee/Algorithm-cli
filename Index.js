@@ -53,6 +53,6 @@ function createDirectoryContents(templatePath, newProjectPath) {
     }
   });
 
-  setTimeout(() => console.log(chalk.magenta.bold('Project is ready!')), 1000);
-  setTimeout(() => console.log(chalk.cyan.bold('DONE')), 2000);
+  setTimeout(() => console.log(chalk.cyan.bold('DONE')), 1000);
+  setTimeout(() => console.log(chalk.magenta.bold('Project is ready!')), 2000);
 }
